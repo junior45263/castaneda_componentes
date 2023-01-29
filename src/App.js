@@ -1,24 +1,27 @@
+import './App.css';
 import styled from 'styled-components';
 
-const Button = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
 
+const Button = styled.button`
+  display: inline-block;
+  color: palevioletred;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
-`;
+  display: block;
+`; 
 
-export default function App() {
+function App() {
   return (
-    <div>
-    <h1>Bernardo Castañeda Rios practica componentes</h1>
-    <Button primary as="a" href="https://utd.edu.mx/">UTD</Button>
-    <Button primary as="a" href="https://github.com/junior45263">GitHub</Button>
-    <Button primary as="a" href="https://www.instagram.com/wonderwall.1301/">Red Social</Button>
-  </div>
+    <div className="App">
+      <h1>Bernardo Castañeda Rios</h1>
+      <Button as="a" href="https://utd.edu.mx" target="_blank">UTD</Button>
+      <Button as="a" href="https://github.com/junior45263" target="_blank">GitHub</Button>
+      <Button as="a" href="https://www.instagram.com/wonderwall.1301/" target="_blank">Instagram</Button>
+    </div>
   );
 }
+
+export default App;
